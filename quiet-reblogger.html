@@ -4,7 +4,7 @@
   <head>
     {MobileAppHeaders}
     <meta charset="utf-8"/>
-    <title>{Title}{block:SearchPage} ({lang:Search results for SearchQuery}){/block:SearchPage}{block:PermalinkPage}{block:PostSummary} — {PostSummary}{/block:PostSummary}{/block:PermalinkPage}</title>
+    <title>{Title}{block:SearchPage} ({lang:Search results for SearchQuery}){/block:SearchPage}{block:PermalinkPage}{block:PostSummary} 痿・{PostSummary}{/block:PostSummary}{/block:PermalinkPage}</title>
     {block:Description}<meta name="description" content="{MetaDescription}"/>{/block:Description}
     <meta name="image:Background Image" content=""/>
     <meta name="font:Text Font" content="{TitleFont}"/>
@@ -446,7 +446,7 @@
             {block:Quote}
               <h3>"{Quote}"</h3>
               {block:Source}
-                <div class="source">－&nbsp;{Source}</div>
+                <div class="source">鐚・nbsp;{Source}</div>
               {/block:Source}
             {/block:Quote}
 
@@ -552,14 +552,6 @@
                   {/block:Tags}
                   </div>
                 {/block:HasTags}
-
-                {block:GroupMembers}
-                  {block:IfShowPostAuthorGroupMember}
-                    <div class="post-author">
-                      {lang:By PostAuthorName 2}
-                    </div>
-                  {/block:IfShowPostAuthorGroupMember}
-                {/block:GroupMembers} 
 
                 {block:PostNotes}
                   <div class="postnotes">
@@ -681,6 +673,7 @@
 
         <div class="colophon">
           <span class="powered-by-tumblr">{lang:Powered by Tumblr 2}</span>
+          <span class="install-this-theme"><a href="http://www.tumblr.com/theme/39781">{lang:Install this theme}</a></span>
         </div>
       </footer>
     </section>
