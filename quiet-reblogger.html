@@ -316,6 +316,8 @@
     <meta name="select:Font Size for Contents" content="font-size:large;"    title="large"        />
     <meta name="select:Font Size for Contents" content="font-size:x-large;"  title="x-large"      />
     <meta name="select:Font Size for Contents" content="font-size:xx-large;" title="xx-large"     />
+    <meta name="select:Post Margin" content="default" title="Default"/>
+    <meta name="select:Post Margin" content="minimum" title="Minimum"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="shortcut icon" href="{Favicon}"/>
     <link rel="alternate" type="application/rss+xml" href="{RSS}">
@@ -813,6 +815,8 @@
           {color:Text Color};
         background-color:
           {BackgroundColor};
+      }
+      article.post.margin-default {
         margin-top:
           0.5rem;
         margin-bottom:
@@ -829,6 +833,12 @@
           0.5rem;
         padding-right:
           0.5rem;
+      }
+      article.post.margin-minimum {
+        margin:
+          0;
+        padding:
+          0;
       }
       div.postnotes, div.postnotes * {
         text-align:
@@ -1075,7 +1085,7 @@
 
       <section id="posts">
         {block:Posts}
-          <article class="post {block:Text}text {/block:Text}{block:Photoset}photoset {/block:Photoset}{block:Photo}photo {/block:Photo}{block:RebloggedFrom}reblogged {/block:RebloggedFrom}{block:Quote}quote {/block:Quote}{block:Link}link {/block:Link}{block:Chat}chat {/block:Chat}{block:Audio}audio {/block:Audio}{block:Video}video {/block:Video}{block:Answer}answer {/block:Answer}{block:Date}not-page post-{PostID}{/block:Date} {block:PermalinkPage} active exposed{/block:PermalinkPage}" {block:Date}data-post-id="post_{PostID}"{/block:Date}>
+          <article class="post margin-{select:Post Margin} {block:Text}text {/block:Text}{block:Photoset}photoset {/block:Photoset}{block:Photo}photo {/block:Photo}{block:RebloggedFrom}reblogged {/block:RebloggedFrom}{block:Quote}quote {/block:Quote}{block:Link}link {/block:Link}{block:Chat}chat {/block:Chat}{block:Audio}audio {/block:Audio}{block:Video}video {/block:Video}{block:Answer}answer {/block:Answer}{block:Date}not-page post-{PostID}{/block:Date} {block:PermalinkPage} active exposed{/block:PermalinkPage}" {block:Date}data-post-id="post_{PostID}"{/block:Date}>
             {block:Date}
               {block:IndexPage}
                 {block:IfShowPostDateTimeInIndexPage}
